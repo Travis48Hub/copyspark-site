@@ -1,7 +1,18 @@
-body {
-  font-family: sans-serif;
-  background: #fdfdfd;
-  color: #222;
-  margin: 0;
-  padding: 0;
+.service-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  margin: 0.5rem 0;
 }

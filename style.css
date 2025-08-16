@@ -1,49 +1,53 @@
+/* Center the entire page content */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eaeaea; /* Softer grey background for the whole site */
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f4; /* Light grey */
+  background: #f4f4f4; /* soft grey */
   color: #222;
   margin: 0;
   padding: 0;
+  text-align: center; /* centers inline elements like text & nav */
 }
 
-/* Optional gradient version */
-body.gradient {
-  background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+/* Keep content constrained and centered */
+main, section {
+  max-width: 900px;
+  margin: 2rem auto; /* centers block elements */
+  padding: 1rem;
 }
 
-header, footer {
+/* Header tweaks */
+header {
+  background: #333;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Navigation centered */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Footer centered */
+footer {
   background: #333;
   color: white;
   padding: 1rem;
-  text-align: center;
-}
-
-#hero {
-  background: #f8f5f2; /* Warm light beige/grey for the hero section */
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.cta {
-  background-color: #ff6600; /* Warm orange for the call-to-action */
-  color: #fff;
-}
-
-.cta:hover {
-  background-color: #e05500; /* Slightly darker orange on hover */
-}
-
-footer {
-  background-color: #f0f0f0; /* Slight warm grey in footer */
-  padding: 1.5rem 0;
+  margin-top: 2rem;
 }

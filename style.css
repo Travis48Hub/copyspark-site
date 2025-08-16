@@ -1,5 +1,12 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaeaea; /* Softer grey background for the whole site */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f4f4; /* Light grey */
   color: #222;
   margin: 0;
@@ -16,4 +23,27 @@ header, footer {
   color: white;
   padding: 1rem;
   text-align: center;
+}
+
+#hero {
+  background: #f8f5f2; /* Warm light beige/grey for the hero section */
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cta {
+  background-color: #ff6600; /* Warm orange for the call-to-action */
+  color: #fff;
+}
+
+.cta:hover {
+  background-color: #e05500; /* Slightly darker orange on hover */
+}
+
+footer {
+  background-color: #f0f0f0; /* Slight warm grey in footer */
+  padding: 1.5rem 0;
 }

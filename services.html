@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - CopySpark</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – CopySpark</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
 </head>
 <body>
@@ -12,25 +12,57 @@
     <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <a href="services.html" class="active">Services</a>
       <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
   <main>
-    <h1>Our Services</h1>
-    <ul>
-      <li><strong>Caption Packs</strong> – R500.00</li>
-      <li><strong>Website Copy (3 pages)</strong> – R700.00</li>
-      <li><strong>Social Media Bio Creation</strong> – R300.00</li>
-    </ul>
-    <a href="contact.html" class="cta">Request a Service</a>
+    <section class="services">
+      <h1>Our Copywriting Services</h1>
+      <ul>
+        <li><strong>Caption Packs</strong> – R500.00  
+          <p>Perfect for Instagram, Facebook, or LinkedIn. Pack of 5–10 captions tailored for your audience.</p>
+        </li>
+        <li><strong>Website Copy</strong> – R700.00  
+          <p>Up to 3 polished web pages. Engaging, SEO-friendly content for your business site.</p>
+        </li>
+        <li><strong>Social Media Bio</strong> – R300.00  
+          <p>Get a professional, scroll-stopping bio for Instagram, LinkedIn, or TikTok.</p>
+        </li>
+      </ul>
+      <a href="contact.html" class="cta">Request a Service</a>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 CopySpark. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    <p>© 2025 CopySpark. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ✅ Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using CopySpark, you agree to our 
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookies">Accept</button>
+  </div>
+
+  <script>
+    // Cookie banner logic (one per session)
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      if (!sessionStorage.getItem("cookiesAccepted")) {
+        banner.style.display = "block";
+      }
+
+      acceptBtn.addEventListener("click", () => {
+        sessionStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>

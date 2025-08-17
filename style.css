@@ -1,53 +1,58 @@
-/* Center the entire page content */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f4; /* soft grey */
-  color: #222;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* centers inline elements like text & nav */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CopySpark – AI Copywriting Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
+</head>
+<body>
+  <header>
+    <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
 
-/* Keep content constrained and centered */
-main, section {
-  max-width: 900px;
-  margin: 2rem auto; /* centers block elements */
-  padding: 1rem;
-}
+  <main>
+    <section id="hero">
+      <h1>AI-Assisted Copywriting for South African Creators & Small Biz</h1>
+      <p>Fast. Affordable. Powered by AI and a human touch.</p>
+      <a href="services.html" class="cta">See Services</a>
+    </section>
+  </main>
 
-/* Header tweaks */
-header {
-  background: #333;
-  padding: 1rem 0;
-}
+  <footer>
+    <p>© 2025 CopySpark. All rights reserved.</p>
+  </footer>
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: white;
-}
+  <!-- ✅ Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using CopySpark, you agree to our 
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookies">Accept</button>
+  </div>
 
-/* Navigation centered */
-nav {
-  margin-top: 0.5rem;
-}
+  <script>
+    // Cookie banner logic (one per session)
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
+      if (!sessionStorage.getItem("cookiesAccepted")) {
+        banner.style.display = "block";
+      }
 
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Footer centered */
-footer {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
-}
+      acceptBtn.addEventListener("click", () => {
+        sessionStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

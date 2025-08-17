@@ -1,64 +1,53 @@
-/* General Styles */
+/* Center the entire page content */
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4; /* soft grey */
+  color: #222;
   margin: 0;
   padding: 0;
-  background: #f5f5f5; /* light grey background */
-  color: #222;
-  line-height: 1.6;
-  text-align: center;
+  text-align: center; /* centers inline elements like text & nav */
 }
 
-/* Center the main content */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Keep content constrained and centered */
+main, section {
+  max-width: 900px;
+  margin: 2rem auto; /* centers block elements */
+  padding: 1rem;
 }
 
+/* Header tweaks */
 header {
-  background: #151515;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: #333;
+  padding: 1rem 0;
 }
 
-header img {
-  height: 60px;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Navigation centered */
+nav {
+  margin-top: 0.5rem;
 }
 
 nav a {
   color: white;
-  margin-left: 1rem;
   text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
-h2, h3 {
-  color: #333;
-}
-
-a.cta {
-  background: #222;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
+/* Footer centered */
 footer {
-  background: #f2f2f2;
+  background: #333;
+  color: white;
   padding: 1rem;
-  font-size: 0.9rem;
-  color: #555;
+  margin-top: 2rem;
 }
-
-.service-card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px

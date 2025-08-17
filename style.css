@@ -1,96 +1,58 @@
-/* General reset & layout */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CopySpark – AI Copywriting Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
+</head>
+<body>
+  <header>
+    <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
 
-/* Page container */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+  <main>
+    <section id="hero">
+      <h1>AI-Assisted Copywriting for South African Creators & Small Biz</h1>
+      <p>Fast. Affordable. Powered by AI and a human touch.</p>
+      <a href="services.html" class="cta">See Services</a>
+    </section>
+  </main>
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+  <footer>
+    <p>© 2025 CopySpark. All rights reserved.</p>
+  </footer>
 
-.logo {
-  width: 120px;
-  margin-bottom: 0.5rem;
-}
+  <!-- ✅ Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using CopySpark, you agree to our 
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookies">Accept</button>
+  </div>
 
-nav {
-  margin-top: 1rem;
-}
+  <script>
+    // Cookie banner logic (one per session)
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
 
-nav a {
-  text-decoration: none;
-  color: #444;
-  margin: 0 1rem;
-  font-weight: bold;
-}
+      if (!sessionStorage.getItem("cookiesAccepted")) {
+        banner.style.display = "block";
+      }
 
-nav a:hover {
-  color: #111;
-}
-
-/* Hero section */
-#hero {
-  background: #fff;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-#hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta {
-  display: inline-block;
-  background-color: #222;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta:hover {
-  background-color: #444;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 2rem 0;
-  color: #555;
-}
-
-.whatsapp-cta {
-  display: block;
-  margin-top: 0.5rem;
-  color: #25D366;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.whatsapp-cta:hover {
-  text-decoration: underline;
-}
+      acceptBtn.addEventListener("click", () => {
+        sessionStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

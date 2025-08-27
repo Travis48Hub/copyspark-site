@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - CopySpark</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logos/header/CopySpark-Cover-1472x832px-Logo-Image.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – CopySpark</title>
+  <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p>Have questions or want to get started? Reach us easily:</p>
-    <p><strong>Email:</strong> support@copyspark.co.za</p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/27640669617" target="_blank">+27 64 066 9617</a></p>
+  <main class="container">
+    <section class="card">
+      <h1>Contact Us</h1>
+      <p>Have questions or ready to start? Reach out via WhatsApp or submit the quick form.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/27640669617" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn btn-outline" href="mailto:support@copyspark.co.za">Email Us</a>
+      </div>
+    </section>
 
-    <h2>Request a Service</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchYopiq67hWoKuKFeHmjCgOLGwJsF8jAcJfgug9L88aEWcJQ/viewform?embedded=true" width="640" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <section class="card">
+      <h2>Project Request Form</h2>
+      <p>Please complete the form below. We’ll respond within 24–48 hours.</p>
+      <div class="iframe-wrap">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchYopiq67hWoKuKFeHmjCgOLGwJsF8jAcJfgug9L88aEWcJQ/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 CopySpark. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  <footer class="site-footer">
+    <p>© 2025 CopySpark. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>🍪 We use cookies to improve your experience and analyze traffic. By clicking “Accept”, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn btn-primary">Accept</button>
+      <button id="cookie-decline" class="btn btn-muted">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const banner = document.getElementById('cookie-banner');
+      const accept = document.getElementById('cookie-accept');
+      const decline = document.getElementById('cookie-decline');
+      const consent = localStorage.getItem('cookieConsent');
+      const declinedSession = sessionStorage.getItem('cookieDeclined');
+      if (!consent && !declinedSession) banner.style.display = 'block';
+      accept.addEventListener('click', function(){
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+      });
+      decline.addEventListener('click', function(){
+        sessionStorage.setItem('cookieDeclined', 'true');
+        banner.style.display = 'none';
+      });
+    })();
+  </script>
 </body>
 </html>

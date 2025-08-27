@@ -3,68 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - CopySpark</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Privacy Policy – CopySpark</title>
   <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html" class="active">Privacy</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Privacy Policy</h1>
-    <p>Last updated: August 2025</p>
+  <main class="container">
+    <section class="card">
+      <h1>Privacy Policy</h1>
+      <p><em>Last updated: August 2025</em></p>
 
-    <h2>1. Introduction</h2>
-    <p>Welcome to <strong>CopySpark</strong>. We respect your privacy and are committed to protecting your personal information in accordance with the <strong>Protection of Personal Information Act (POPIA)</strong> in South Africa and the <strong>GDPR</strong> for international visitors.</p>
+      <h2>1. Introduction</h2>
+      <p>We respect your privacy and protect your personal information in line with South Africa’s <strong>POPIA</strong> and international standards such as the <strong>GDPR</strong>.</p>
 
-    <h2>2. Information We Collect</h2>
-    <ul>
-      <li><strong>Personal details</strong>: name, email, WhatsApp number via our service forms.</li>
-      <li><strong>Usage data</strong>: cookies, analytics, and browsing activity.</li>
-      <li><strong>Communications</strong>: messages via WhatsApp, email, or contact forms.</li>
-    </ul>
+      <h2>2. Information We Collect</h2>
+      <ul>
+        <li><strong>Personal details</strong>: name, email, WhatsApp number through our forms.</li>
+        <li><strong>Usage data</strong>: cookies/analytics to improve the website.</li>
+        <li><strong>Communications</strong>: messages via WhatsApp/email/forms.</li>
+      </ul>
 
-    <h2>3. How We Use Your Information</h2>
-    <ul>
-      <li>Provide and deliver services.</li>
-      <li>Respond to inquiries.</li>
-      <li>Improve site and services.</li>
-      <li>Send updates and marketing (if opted in).</li>
-    </ul>
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>Deliver services and support.</li>
+        <li>Respond to enquiries.</li>
+        <li>Improve our site and services.</li>
+        <li>Send updates/marketing if you opt-in.</li>
+      </ul>
 
-    <h2>4. Cookies</h2>
-    <p>We use cookies to improve performance and enhance user experience. You can accept or decline cookies via our cookie banner.</p>
+      <h2>4. Cookies</h2>
+      <p>We use cookies to enhance your experience and analyze traffic. You can accept or decline via our cookie banner.</p>
 
-    <h2>5. Sharing Your Data</h2>
-    <p>We do <strong>not</strong> sell or rent your personal data. Data is shared only if necessary for service delivery or required by law.</p>
+      <h2>5. Sharing</h2>
+      <p>We do <strong>not</strong> sell or rent personal data. We only share when necessary for service delivery or required by law.</p>
 
-    <h2>6. Data Protection</h2>
-    <p>We apply reasonable measures to safeguard your data, but no system is 100% secure. Use is at your own risk.</p>
+      <h2>6. Security</h2>
+      <p>We use reasonable technical and organizational measures to protect data, but no method is completely secure.</p>
 
-    <h2>7. Your Rights</h2>
-    <p>You may:</p>
-    <ul>
-      <li>Access, update, or request deletion of your data.</li>
-      <li>Withdraw consent at any time.</li>
-      <li>Request a copy of your stored data.</li>
-    </ul>
+      <h2>7. Your Rights</h2>
+      <ul>
+        <li>Access, update or request deletion of your data.</li>
+        <li>Withdraw consent at any time.</li>
+        <li>Request a copy of your information.</li>
+      </ul>
 
-    <h2>8. Contact Us</h2>
-    <p><strong>Email:</strong> support@copyspark.co.za<br>
-       <strong>WhatsApp:</strong> +27 64 066 9617</p>
-
-    <p>By using this site, you consent to this Privacy Policy.</p>
+      <h2>8. Contact</h2>
+      <p><strong>Email:</strong> support@copyspark.co.za<br>
+         <strong>WhatsApp:</strong> +27 64 066 9617</p>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 CopySpark. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  <footer class="site-footer">
+    <p>© 2025 CopySpark. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>🍪 We use cookies to improve your experience and analyze traffic. By clicking “Accept”, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn btn-primary">Accept</button>
+      <button id="cookie-decline" class="btn btn-muted">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const banner = document.getElementById('cookie-banner');
+      const accept = document.getElementById('cookie-accept');
+      const decline = document.getElementById('cookie-decline');
+      const consent = localStorage.getItem('cookieConsent');
+      const declinedSession = sessionStorage.getItem('cookieDeclined');
+      if (!consent && !declinedSession) banner.style.display = 'block';
+      accept.addEventListener('click', function(){
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+      });
+      decline.addEventListener('click', function(){
+        sessionStorage.setItem('cookieDeclined', 'true');
+        banner.style.display = 'none';
+      });
+    })();
+  </script>
 </body>
 </html>

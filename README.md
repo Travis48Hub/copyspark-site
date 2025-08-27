@@ -27,4 +27,4 @@ I’m building projects that combine design and development, aiming to create se
 
 ## 🤝 Let’s Connect
 
-I’m always open to advice, feedback, and collaboration opportunities. If you’re working on something exciting or just want to share ideas, feel free to reach out!
+I’m always open to advice, feedback, and collaboration opportunities. If you’re working on something exciting or just want to share ideas, feel free to reach out! artdesignza@proton.me 

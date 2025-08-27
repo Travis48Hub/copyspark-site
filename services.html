@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - CopySpark</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – CopySpark</title>
   <link rel="icon" href="assets/logos/favicon/favicon-512.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logos/header/logo-header.png" alt="CopySpark Logo" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Our Services</h1>
-    <ul>
-      <li><strong>Caption Packs</strong> – R500.00</li>
-      <li><strong>Website Copy (3 pages)</strong> – R700.00</li>
-      <li><strong>Social Media Bio Creation</strong> – R300.00</li>
-    </ul>
-    <a href="contact.html" class="cta">Request a Service</a>
+  <main class="container">
+    <section class="card">
+      <h1>Our Services</h1>
+      <p>Choose the option that fits your goals and timeline. All work is reviewed by a human editor before delivery.</p>
+    </section>
+
+    <section class="grid-3">
+      <div class="card">
+        <h3>Caption Packs</h3>
+        <p>5–15 ready-to-post captions tailored to your brand, audience & platform.</p>
+        <p class="price">R500</p>
+        <a href="contact.html" class="btn btn-primary">Order Captions</a>
+      </div>
+      <div class="card">
+        <h3>Website Copy (3 pages)</h3>
+        <p>Home, About & Services pages that convert visitors into customers.</p>
+        <p class="price">R700</p>
+        <a href="contact.html" class="btn btn-primary">Start Website Copy</a>
+      </div>
+      <div class="card">
+        <h3>Social Media Bio</h3>
+        <p>Position your brand clearly with a scroll-stopping bio (IG/LinkedIn/Facebook).</p>
+        <p class="price">R300</p>
+        <a href="contact.html" class="btn btn-primary">Upgrade My Bio</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Bundles (Best Value)</h2>
+      <div class="grid-3">
+        <div class="mini-card">
+          <h4>Starter Visibility Pack</h4>
+          <p>Bio + Caption Pack. Get seen & stand out.</p>
+          <p class="price">R700</p>
+          <a href="contact.html" class="btn btn-outline">Get Starter Pack</a>
+        </div>
+        <div class="mini-card">
+          <h4>Small Business Growth Pack</h4>
+          <p>3-page Website Copy + Caption Pack.</p>
+          <p class="price">R1,100</p>
+          <a href="contact.html" class="btn btn-outline">Get Growth Pack</a>
+        </div>
+        <div class="mini-card">
+          <h4>Premium Online Presence Kit</h4>
+          <p>Website Copy + 2x Caption Packs + Bio + 3-email Welcome.</p>
+          <p class="price">R1,600</p>
+          <a href="contact.html" class="btn btn-outline">Get Premium Kit</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 CopySpark. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  <footer class="site-footer">
+    <p>© 2025 CopySpark. All rights reserved. · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>🍪 We use cookies to improve your experience and analyze traffic. By clicking “Accept”, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn btn-primary">Accept</button>
+      <button id="cookie-decline" class="btn btn-muted">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const banner = document.getElementById('cookie-banner');
+      const accept = document.getElementById('cookie-accept');
+      const decline = document.getElementById('cookie-decline');
+      const consent = localStorage.getItem('cookieConsent');
+      const declinedSession = sessionStorage.getItem('cookieDeclined');
+      if (!consent && !declinedSession) banner.style.display = 'block';
+      accept.addEventListener('click', function(){
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+      });
+      decline.addEventListener('click', function(){
+        sessionStorage.setItem('cookieDeclined', 'true');
+        banner.style.display = 'none';
+      });
+    })();
+  </script>
 </body>
 </html>

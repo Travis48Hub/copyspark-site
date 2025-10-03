@@ -11,8 +11,9 @@ A service site for creators and marketers, starting with copywriting support and
 I’m developing a web application that will later evolve into a mobile app. My focus is on design, usability, and providing real value to users.
 
 ### Design & Creativity  
-Before coding, I studied graphic design and digital illustration, which helps me approach projects with a creative eye for detail.  
-You can also check out my artwork and designs on [Redbubble](https://www.redbubble.com/people/yourusername) <!-- Update the link as needed -->
+Before coding, I studied graphic design and digital illustration, which helps me approach projects with a creative eye for detail. 
+I create digital tools, AI-powered copy, and art to make life easier for creators + small businesses 💡 | Buy me a coffee ☕: buymeacoffee.com/artdesignza or
+You can check out my artwork and support my growth and designs by purchasing one of the thousands of items available with over 200+ designs to choose from, on [Redbubble](T-ArtDesign.redbubble.com) <!-- Update the link as needed -->
 
 ## 🛠️ Skills & Tools
 

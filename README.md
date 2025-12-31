@@ -15,8 +15,8 @@ Buy me a coffee ☕: buymeacoffee.com/artdesignza
 Before coding, I studied graphic design and digital illustration, which helps me approach projects with a creative eye for detail. 
 I create digital tools, AI-powered copy, and art to make life easier for creators + small businesses 💡 
 Buy me a coffee ☕: buymeacoffee.com/artdesignza or
-You can check out my artwork and support my growth and digital design journey by purchasing one of the many items available with over 200+ designs to choose from, on 
-[Redbubble](T-ArtDesign.redbubble.com) <!-- Update the link as needed -->
+You can check out my artwork and support my growth and digital design journey by purchasing one of the many items available, with over 200+ designs to choose from, on 
+[Redbubble](https://www.redbubble.com/people/t-artdesign/shop?asc=u) <!-- Update the link as needed -->
 
 ## 🛠️ Skills & Tools
 
